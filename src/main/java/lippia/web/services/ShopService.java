@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.openqa.selenium.support.ui.Select;
 
+import static lippia.web.constants.MyAccountConstants.MESSEGER_ERROR;
 import static lippia.web.constants.SuperiorNavigationBarConstants.*;
 
 public class ShopService  {
@@ -26,15 +27,16 @@ public class ShopService  {
     }
 
 
-    public static void dropdownsalec( String categoryslecionada){
-        WebActionManager.getDropdownAllSelectedOptions(categoryslecionada);
+    public static void dropdownsalec( String categoria){
+        String categorySelec = SELECTION_DROPDOWN.replace("%s", categoria);
+        Assert.assertTrue(WebActionManager.isPresent(categorySelec));
+        WebActionManager.dragAndDrop(categorySelec,categoria);
+        WebActionManager.click(DEFAULT_SORTING);
     }
 
     public static void validacioncategory(){
-        Assert.assertTrue(ActionManager.isPresent(SELECTION_DROPDOWN));
+
     }
-
-
 
 }
 

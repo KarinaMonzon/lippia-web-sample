@@ -10,9 +10,4 @@ public class SuperiorNavigationBarConstants {
     public static final  String DEFAULT_SORTING = "xpath://*[@id='content']/form/select";
     public static final String SELECTION_DROPDOWN = "xpath://*[contains(text(), '%s')]";
 
-    public static final String PRUEBA_CATEGORIA = "xpath://*[@id='content']/form/select/option[1]";
-
-
-
-
 }

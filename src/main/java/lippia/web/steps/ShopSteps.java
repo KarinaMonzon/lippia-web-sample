@@ -34,10 +34,12 @@ public class ShopSteps extends PageSteps {
     }
 
     @When("the user click (.*)")
-    public void theUserClickDefaultSortin(){
+    public void theUserClickDefaultSortin(String categoria){
+        ShopService.dropdownsalec(categoria);
     }
 
     @Then("the user can views the popular products only")
     public void theUserCanViewsThePopularProductsOnly(){
+        ShopService.validacioncategory();
     }
 }
