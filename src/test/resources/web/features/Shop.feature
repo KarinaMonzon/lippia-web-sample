@@ -1,7 +1,31 @@
-Feature: Definir
+@Smoke
+Feature: Shop
+  Background:
+    Given the client is in practice
 
-  @Smoke
-  Scenario: Definir
-    Given The client is in google page
-    When The client tap on Shop menu
-    Then The client see Filter By Price
+  @Filter
+  Scenario: verify filter by price
+    Given the client tap on Shop menu
+    Then the client see Filter By Price
+
+    @Price
+    Scenario: verify this particular product
+      Given the client tap on Shop menu
+      When the client click any of the product available in the product category
+      Then the client can view only see particular product
+
+      @DefaultSorting
+      Scenario Outline: verify default sorting dropdown
+        Given the client tap on Shop menu
+        When the user click '<Default Sorting>'
+        Then the user can views the popular products only
+
+        Examples:
+          | Default Sorting        |
+          | Sort by popularity     |
+          | Sort by average rating |
+
+
+
+
+
