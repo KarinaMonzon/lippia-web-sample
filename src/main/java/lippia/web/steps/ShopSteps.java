@@ -5,6 +5,7 @@ import com.crowdar.core.actions.WebActionManager;
 import io.cucumber.java.en.*;
 import lippia.web.services.ShopService;
 import lippia.web.services.SuperiorBarNavigationBarService;
+import org.openqa.selenium.WebDriver;
 
 public class ShopSteps extends PageSteps {
 
@@ -34,8 +35,8 @@ public class ShopSteps extends PageSteps {
     }
 
     @When("the user click (.*)")
-    public void theUserClickDefaultSortin(String categoria){
-        ShopService.dropdownsalec(categoria);
+    public void theUserClickDefaultSorti(String optionSelecc){
+        ShopService.dropdownsalec(optionSelecc);
     }
 
     @Then("the user can views the popular products only")

@@ -17,13 +17,14 @@ Feature: Shop
       @DefaultSorting
       Scenario Outline: verify default sorting dropdown
         Given the client tap on Shop menu
-        When the user click '<Default Sorting>'
+        When the user click <Default Sorting>
         Then the user can views the popular products only
 
         Examples:
           | Default Sorting        |
           | Sort by popularity     |
           | Sort by average rating |
+
 
 
 
