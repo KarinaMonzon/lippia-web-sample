@@ -2,7 +2,9 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
+import com.crowdar.driver.DriverManager;
 import io.cucumber.java.en.When;
+import jdk.internal.logger.SurrogateLogger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -31,16 +33,17 @@ public class ShopService  {
     }
 
 
-    public static void dropdownsalec(String dropdownLocator){
-        String categorySelec = SELECTION_DROPDOWN.replace("%s", dropdownLocator);
-        Assert.assertTrue(WebActionManager.isPresent(categorySelec));
-        WebActionManager.getDropdownAllSelectedOptions(dropdownLocator);
-        WebActionManager.click(DEFAULT_SORTING);
+    public static void dropdownsalec(String dropdownGategory){
+        WebActionManager.setDropdownByValue(DROPDOWN_SORTING,dropdownGategory);
     }
 
-    public static void validacioncategory(){
-
+    public static void validacioncategory(String text){
+        String url = DriverManager.getDriverInstance().getCurrentUrl();
+        Assert.assertTrue(url.contains(text));
     }
-
 }
+
+
+
+
 

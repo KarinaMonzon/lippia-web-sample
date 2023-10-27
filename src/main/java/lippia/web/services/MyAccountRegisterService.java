@@ -12,7 +12,8 @@ public class MyAccountRegisterService {
         WebActionManager.setInput(PASSWORD_REGISTRATION, password);
         WebActionManager.click(REGISTER_BUTTON);
     }
-    public static void validmessageregitration(String error){
+
+    public static void invalidmMssageRegitration(String error){
         String locatormessagerregister = MESSEGER_ERROR.replace("%s", error);
         Assert.assertTrue(WebActionManager.isPresent(locatormessagerregister));
     }

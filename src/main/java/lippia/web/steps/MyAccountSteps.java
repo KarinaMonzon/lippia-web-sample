@@ -22,7 +22,7 @@ public class MyAccountSteps  extends PageSteps {
 
     @Then("the client is successfully logged in to the website")
     public void theClientIsSuccessfullyLoggedInToTheWebsite() {
-        MyAccountService.verifiedlogin();
+        MyAccountService.verifiedLogiValid();
     }
 
     @When("the client logs in with  (.*) and (.*) invalid credentials")
@@ -32,7 +32,7 @@ public class MyAccountSteps  extends PageSteps {
 
     @Then("the client must visualize (.*)d will be prompted to enter again")
     public void theClientMustVisualizeAndWillBePromptedToEnterAgain(String message) {
-        MyAccountService.validmessagerlogin(message);
+        MyAccountService.invalidMessagerLogin(message);
     }
 }
 

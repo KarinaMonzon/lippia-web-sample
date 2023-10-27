@@ -14,8 +14,8 @@ import static lippia.web.constants.MyAccountConstants.*;
 
 public class MyAccountRegisterSteps extends PageSteps {
     @When("the client registered (.*) and (.*) correct")
-    public void theClientRegisteredAndCorrect(String email, String mail) {
-        MyAccountRegisterService.Registration(email,mail);
+    public void theClientRegisteredAndCorrect(String email, String pass) {
+        MyAccountRegisterService.Registration(email,pass);
     }
 
     @When("the client registered (.*) and (.*) incorrect")
@@ -25,6 +25,6 @@ public class MyAccountRegisterSteps extends PageSteps {
 
     @Then("the client must visualize a warning (.*)")
     public void theClientMustVisualizeAWarning(String error) {
-        MyAccountRegisterService.validmessageregitration(error);
+        MyAccountRegisterService.invalidmMssageRegitration(error);
     }
 }

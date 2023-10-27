@@ -39,8 +39,8 @@ public class ShopSteps extends PageSteps {
         ShopService.dropdownsalec(optionSelecc);
     }
 
-    @Then("the user can views the popular products only")
-    public void theUserCanViewsThePopularProductsOnly(){
-        ShopService.validacioncategory();
+    @Then("the user can views the (.*) only")
+    public void theUserCanViewsTheDafoultSortingOnly(String text){
+        ShopService.validacioncategory(text);
     }
 }

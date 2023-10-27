@@ -19,11 +19,11 @@ Feature: login
     When the client logs in with  <username> and <password> invalid credentials
     Then the client must visualize <message> and will be prompted to enter again
     Examples:
-      | username                 | password        | message                                           |
-      | mariacsoto@gmail.com     | mariasoto1234   | A user could not be found with this email address |
-      | mariacSoto1234@gmail.com |                 | Password is required                              |
-      |                          | MariaSoto1234!! | Username is required                              |
-      |                          |                 | Username is required                              |
+      | username                 | password        | message                                              |
+      | mariacsoto123@gmail.com  | mariasoto1234   | A user could not be found with this email address an |
+      | mariacSoto1234@gmail.com |                 | Password is required                                 |
+      |                          | MariaSoto1234!! | Username is required                                 |
+      |                          |                 | Username is required                                 |
 
   @RegisterValid
   Scenario Outline: Registration with valid credentials
