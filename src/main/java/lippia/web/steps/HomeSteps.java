@@ -7,11 +7,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lippia.web.services.HomeService;
 
+
 public class HomeSteps extends PageSteps {
 
     @Given("The client is in practice")
     public void theClientIsInPractice() {
-       HomeService.go();
+      HomeService.go();
     }
 
     @When("The client click on the image in the arrivals")

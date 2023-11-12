@@ -5,7 +5,7 @@ import com.crowdar.driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
+
 
 import static lippia.web.constants.HomeConstants.*;
 
@@ -17,6 +17,7 @@ public class HomeService {
     }
     public static void clickImage(){
         WebActionManager.click(IMAGE_ARRIVALS);
+        WebActionManager.waitPresence(ADD_TO_BASKET);
     }
 
     public static void addBasket(){

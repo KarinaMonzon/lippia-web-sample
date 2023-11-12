@@ -1,10 +1,15 @@
 package lippia.web.services;
+import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
+import com.crowdar.driver.DriverManager;
 import org.testng.Assert;
+
 
 import static lippia.web.constants.LoginConstants.*;
 
-public class LoginService {
+public class LoginService extends ActionManager {
+
+
     public static void login (String user, String pass){
         WebActionManager.setInput(USERNAME,user);
         WebActionManager.setInput(PASSWORD,pass);
@@ -19,5 +24,10 @@ public class LoginService {
     }
     public static void nextTab (){
         WebActionManager.click(HOME);
+
     }
+    public static void navigateBack (){
+        DriverManager.getDriverInstance().getWrappedDriver().navigate().back();
+    }
+
 }

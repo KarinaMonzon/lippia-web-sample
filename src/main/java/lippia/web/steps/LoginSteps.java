@@ -26,14 +26,17 @@ public class LoginSteps extends PageSteps {
         LoginService.messegeLogin(message);
     }
 
-    @And("The client logged in and is heading to another tab")
+    @And("The client logged in and is heading to another tab web site")
     public void theClientLoggedInAndIsHeadingToAnotherTab() {
         LoginService.verifiedLogin();
         LoginService.nextTab();
     }
-    @Then("The client presses the back button should not log in then he can view the general page")
-    public void theClientPressesTheBackButtonShouldNotLogInThenHeCanViewTheGeneralPage(String message) {
+    @And("The client presses the back button should not log in")
+    public void theClientPressesTheBackButtonShouldNotLogIn() {
+        LoginService.navigateBack();
     }
-
-
+    @Then("The client view the general page")
+    public void theClientViewTheGeneralPage() {
+        LoginService.verifiedLogin();
+    }
 }
