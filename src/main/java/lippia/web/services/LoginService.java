@@ -1,5 +1,4 @@
 package lippia.web.services;
-import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
 import com.crowdar.driver.DriverManager;
 import org.testng.Assert;
@@ -7,7 +6,7 @@ import org.testng.Assert;
 
 import static lippia.web.constants.LoginConstants.*;
 
-public class LoginService extends ActionManager {
+public class LoginService  {
 
 
     public static void login (String user, String pass){
