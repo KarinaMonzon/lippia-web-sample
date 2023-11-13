@@ -2,12 +2,7 @@ package lippia.web.services;
 import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
-import cucumber.api.java.en_old.Ac;
-import org.checkerframework.checker.units.qual.C;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
-
 import static com.crowdar.core.actions.WebActionManager.navigateTo;
 import static lippia.web.constants.HomeConstants.*;
 
@@ -55,6 +50,12 @@ public class HomeService extends ActionManager{
        ActionManager.getElementsByParent(STATE,state);
        ActionManager.setInput(POSTCODE,postcode);
     }
-
+    public static void metohodPayment(){
+        ActionManager.click(RADIO_BUTTON);
+    }
+    public static void placeOrder(){
+        WebActionManager.click(PLACE_ORDEN);
+        Assert.assertTrue(ActionManager.waitPresence(END_ORDER).isDisplayed());
+    }
 }
 

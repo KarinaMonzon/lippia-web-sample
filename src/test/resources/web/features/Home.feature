@@ -5,14 +5,14 @@ Feature: Home
     Given The client is in practice
     When The client click on the image in the arrivals
 
-  @CheckCoupon
+  @CheckCoupon 
   Scenario: Add to basket check apply coupon
     Given The client adds the book to your basket
     When The client click on "VIEW BASKET" check item with price
     And now click on "PROCEED TO CHECKOUT" aot payment
     Then The client has the feasibility to add coupon in the payment and see additional details
 
-  @PlaceOrder @Academy
+  @PlaceOrder
   Scenario Outline: Performs a purchase in the online of a book
     Given The client adds the book to your basket
     When The client click on "VIEW BASKET" check item with price

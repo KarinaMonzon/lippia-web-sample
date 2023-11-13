@@ -1,7 +1,5 @@
 package lippia.web.constants;
 
-import org.apache.log4j.varia.StringMatchFilter;
-
 public class HomeConstants {
     public static final String IMAGE_ARRIVALS = "xpath://*[@id='text-22-sub_row_1-0-2-1-0']/div/ul/li/a[1]/img";
     public static final String VIEW_PRODUCT = "xpath://*[@id='product-163']/div[2]/h1";
@@ -25,5 +23,8 @@ public class HomeConstants {
     public static final String CITY = "xpath://*[@id='billing_city']";
     public static final String POSTCODE = "xpath://*[@id='billing_postcode']";
     public static final String STATE = "xpath:///*[@id='select2-chosen-2']";
+    public static final String RADIO_BUTTON = "xpath://*[@id='payment']/ul/li[3]";
+    public static final String PLACE_ORDEN = "xpath://*[@id='place_order']";
+    public static final String END_ORDER = "xpath://*[@id='page-35']/div/div[1]/p[1]";
 }
 
