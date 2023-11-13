@@ -4,7 +4,7 @@ Feature: Dashboard
   Background:
     Given The client is in practice
 
-  @Details @Academy
+  @Details
   Scenario Outline: View and update account details
     Given The client click on My Account
     When The client logs in with <user> and <pass> valid

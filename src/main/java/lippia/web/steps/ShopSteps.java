@@ -8,18 +8,18 @@ import lippia.web.services.HomeService;
 
 public class ShopSteps extends PageSteps {
 
-    @Given("The client is in google page")
-    public void home() {
-        HomeService.go();
-    }
 
-    @When( "The client tap on Shop menu" )
+    @Given( "The client click on Shop menu" )
     public void theClientTapOnShop() {
         SuperiorBarNavigationBarService.shopMenu();
     }
 
-    @Then( "The client see Filter By Price" )
-    public void theClientSee(  ) {
-        ShopService.verifyPage();
+    @When("The client add any of the product available")
+    public void theClientAddAnyOfTheProductAvailable() {
+        
+    }
+
+    @And("The client link to go payment page")
+    public void theClientLinkToGoPaymentPage() {
     }
 }

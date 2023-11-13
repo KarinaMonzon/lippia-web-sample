@@ -17,13 +17,14 @@ public class HomeConstants {
     public static final String COMAPNYNAME = "xpath://*[@id='billing_company']";
     public static final String EMAIL = "xpath://*[@id='billing_email']";
     public static final String PHONE = "xpath://*[@id='billing_phone']";
-    public static final String COUNTRY = "xpath://*[@id='select2-drop']";
+    public static final String COUNTRY = "xpath://*[@id='select2-chosen-1']";
     public static final String COUNTRY_INPUT = "xpath://*[@id='s2id_autogen1_search']";
-    public static final String ADDRESS = " xpath: //*[@id='billing_address_1']";
+    public static final String ADDRESS = "xpath://*[@id='billing_address_1']";
     public static final String CITY = "xpath://*[@id='billing_city']";
     public static final String POSTCODE = "xpath://*[@id='billing_postcode']";
-    public static final String STATE = "xpath:///*[@id='select2-chosen-2']";
-    public static final String RADIO_BUTTON = "xpath://*[@id='payment']/ul/li[3]";
+    public static final String STATE = "xpath://*[@id='select2-chosen-2']";
+    public static final String STATE_INPUT = "xpath://*[@id='s2id_autogen2_search']";
+    public static final String RADIO_BUTTON = "xpath://*[@id='payment']/ul/li[2]/label";
     public static final String PLACE_ORDEN = "xpath://*[@id='place_order']";
     public static final String END_ORDER = "xpath://*[@id='page-35']/div/div[1]/p[1]";
 }
