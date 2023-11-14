@@ -1,6 +1,4 @@
 package lippia.web.steps;
-
-
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.When;
 import lippia.web.services.RegistrationService;

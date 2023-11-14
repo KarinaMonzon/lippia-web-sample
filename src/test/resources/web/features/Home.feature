@@ -12,7 +12,7 @@ Feature: Home
     And The client now click on "PROCEED TO CHECKOUT" aot payment
     Then The client has the feasibility to add coupon in the payment and see additional details
 
-  @PlaceOrder @Academy
+  @PlaceOrder
   Scenario Outline: Performs a purchase in the online of a book
     Given The client adds the book to your basket
     When The client click on "VIEW BASKET" check item with price

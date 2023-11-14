@@ -11,7 +11,7 @@ Feature: login
     Then The client must visualize a warning <message>
 
     Examples:
-      | username                   | password            | message                                           |
+      | username                   | password            | message                                                                           |
       | CaRoLiNaLoPeZ021@gmail.com | CarolINALopEZ2024!! | The password you entered for the username CaRoLiNaLoPeZ021@gmail.com is incorrect |
 
   @loginAuthentication
